@@ -1,12 +1,8 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
-
-import { HttpClientModule } from '@angular/common/http';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { GoogleSearchRoutingModule } from './google-search-routing.module';
+import { GoogleSearchComponent } from './google-search.component';
 
 
 import {MatSelectModule} from '@angular/material/select';
@@ -20,25 +16,22 @@ import { MatFormFieldModule } from "@angular/material/form-field";
 
 
 
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    GoogleSearchComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    MatSliderModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
+    CommonModule,
+    GoogleSearchRoutingModule,
     MatSelectModule,
+    MatSliderModule,
     MatAutocompleteModule,
-    FormsModule,
+    FormsModule, 
     ReactiveFormsModule,
     MatInputModule,
-    MatFormFieldModule,
-    
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    MatFormFieldModule
+  ]
 })
-export class AppModule { }
+export class GoogleSearchModule { }
